@@ -16,9 +16,7 @@ pip install torch
 
 ## Usage
 To execute the model training, simply run the following command in your terminal:
-
-
-## python model_and_train.py
+python model_and_train.py
 This command will start the training process and display the loss at the end of each epoch, allowing you to monitor the model's learning progress.
 
 ## Model Overview
