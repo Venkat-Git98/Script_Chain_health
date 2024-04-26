@@ -1,0 +1,13 @@
+### Sequence Representation Challenges in Deep Architectures
+
+When designing a deep architecture that have multiple self-attention layers and positional encodings to represent sequences, several issues might arise. 
+
+First, vanishing gradients can become a significant concern in deeper networks, where the gradients of the loss function may become very small (vanish), making it difficult for the lower layers to learn effectively during backpropagation. This occurance problem is increased in networks relying heavily on self-attention due to the complexity and depth of interactions between inputs.
+
+Second, overfitting is a potential risk, particularly if the model has a large number of parameters relative to the amount of training data available. Self-attention layers, especially when stacked, can significantly increase the model's capacity. Without sufficient regularization or a large enough dataset, the model might learn to memorize training data specifics rather than generalizing from it.
+
+Another challenge is the computational cost and memory usage, which grow quadratically with the sequence length in self-attention mechanisms. This can make training and inference impractically slow and costly for long sequences, limiting the scalability of the architecture.
+
+Additionally, while positional encodings provide necessary sequence order information to the model, the choice between fixed and learnable positional encodings can impact performance. Fixed encodings might not capture complex dependencies in some types of data, whereas learnable encodings might not generalize well across different tasks or datasets without careful tuning.
+
+Lastly, there is the issue of attention collapse, a phenomenon where deep stacks of self-attention layers lead to attention distributions that become overly peaked or diffuse, thus failing to effectively capture the intended dependencies within the sequence. This can degrade the model's performance and limit its ability to leverage long-range dependencies, which are crucial for tasks involving longer sequences or complex structures.
