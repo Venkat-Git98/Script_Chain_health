@@ -22,9 +22,12 @@ This command will start the training process and display the loss at the end of 
 ## Model Overview
 The model consists of the following components integrated into a single Python script:
 
-## RandomSequenceDataset: A custom PyTorch Dataset class that generates random sequences of data. Each sequence has a predefined length with randomly generated features.
-## LearnablePositionalEncoding: A PyTorch nn.Module that adds learnable positional encodings to the input sequences. This feature enables the model to account for the order of data points within each sequence, adapting these encodings during the training process.
-## SimpleModel: Combines the learnable positional encoding module with a basic linear layer. This setup demonstrates a straightforward application of incorporating sequence order awareness into neural network architectures.
+## RandomSequenceDataset: 
+A custom PyTorch Dataset class that generates random sequences of data. Each sequence has a predefined length with randomly generated features.
+## LearnablePositionalEncoding: 
+A PyTorch nn.Module that adds learnable positional encodings to the input sequences. This feature enables the model to account for the order of data points within each sequence, adapting these encodings during the training process.
+## SimpleModel: 
+Combines the learnable positional encoding module with a basic linear layer. This setup demonstrates a straightforward application of incorporating sequence order awareness into neural network architectures.
 
 ## Training Process
 The training script included in model_and_train.py sets up the model and data loader, then runs a training loop for a specified number of epochs. It uses Mean Squared Error (MSE) for loss calculation and Adam as the optimizer.
